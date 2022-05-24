@@ -1,0 +1,719 @@
+$redfont: #910000;
+$redfont2: #c20303;
+.bgImg {
+	> img {
+		min-height: 400px;
+	}
+}
+.pc_bg{
+	display: block;
+	@media screen and (max-width: 820px) {
+		display: none!important;
+	}
+}
+.m_bg{
+	display: none;
+	@media screen and (max-width: 820px) {
+		display: block!important;
+	}
+}
+.whiteBox1 {
+	color: #000;
+	background: #fff;
+	border: none;
+	border-bottom: none;
+	&::placeholder {
+		color: #000;
+	}
+}
+// banner开始
+.bannerTitle {
+	position: absolute;
+	left: 0;
+	top: 33%;
+	@media screen and (max-width: 820px) {
+		width: 100%;
+		top: 13%;
+		>.txt_title_big {
+			font-size: 32px;
+		}
+	}
+	@media screen and (max-width: 380px) {
+		width: 100%;
+		top: 7%;
+		>.txt_title_big {
+			font-size: 28px;
+		}
+	}
+}
+.bannerTitle2 {
+	position: absolute;
+	left: 0;
+	top: 33%;
+	@media screen and (max-width: 820px) {
+		width: 100%;
+		top: 22%;
+		>.txt_title_big {
+			font-size: 32px;
+		}
+	}
+}
+
+.title1 {
+	max-width: 690px;
+	font-size: 22px;
+	color: #fff;
+	line-height: 35px;
+	margin-top: 25px;
+	@media screen and (max-width: 820px) {
+		font-size: 16px;
+		line-height: 20px;
+		margin-top: 20px;
+	}
+	@media screen and (max-width: 414px) {
+		font-size: 12px;
+		line-height: 20px;
+		margin-top: 20px;
+	}
+}
+.txt_en {
+	font-size: 30px;
+	font-weight: bold;
+	color: $redfont;
+	@media screen and (max-width: 820px) {
+		font-size: 18px;
+	}
+	@media screen and (max-width: 414px) {
+		font-size: 14px;
+	}
+}
+.gnBox {
+	display: flex;
+	align-items: center;
+	margin-top: 64px;
+	flex-wrap: wrap;
+	> div {
+		padding: 0 12px;
+		position: relative;
+	}
+	> div:nth-child(1) {
+		padding-left: 0;
+	}
+	@media screen and (max-width: 820px) {
+		width: 100%;
+		flex-wrap: wrap;
+		margin-top: 26px;
+		>div{
+			padding: 0;
+		}
+	}
+	@media screen and (max-width: 380px) {
+		margin-top: 20px;
+	}
+}
+.gnItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 76px;
+	>.iconBox{
+		> i {
+			display: block;
+			font-size: 44px;
+			color: #f5f5f5;
+		}
+		> .icon-shuangzhongyufangjizhi {
+			font-size: 38px;
+		}
+		> .icon-shou {
+			font-size: 52px;
+			line-height: 45px;
+		}
+		> .icon-mokuai1 {
+			font-size: 34px;
+		}
+	}
+	> span {
+		margin-top: auto;
+		font-size: 14px;
+		color: #fff;
+	}
+	@media screen and (max-width: 820px) {
+		width: 50%;
+		flex-direction: row;
+		min-height: 24px;
+		height: auto;
+		margin-bottom: 12px;
+		>.iconBox{
+			> i {
+				font-size: 22px;
+			}
+			> .icon-shuangzhongyufangjizhi {
+				font-size: 23px;
+			}
+			> .icon-shou {
+				line-height: inherit;
+				font-size: 28px;
+			}
+			> .icon-mokuai1 {
+				font-size: 18px;
+			}
+		}
+		>span{
+			font-size: 16px;
+			margin-top: 0;
+			margin-left: 8px;
+		}
+	}
+	@media screen and (max-width: 414px) {
+		width: 50%;
+		flex-direction: row;
+		min-height: 24px;
+		height: auto;
+		margin-bottom: 12px;
+		>.iconBox{
+			width: 34px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			> i {
+				font-size: 22px;
+			}
+			> .icon-shuangzhongyufangjizhi {
+				font-size: 21px;
+			}
+			> .icon-shou {
+				line-height: inherit;
+				font-size: 26px;
+			}
+			> .icon-mokuai1 {
+				font-size: 18px;
+			}
+		}
+		>span{
+			font-size: 12px;
+			margin-top: 0;
+			margin-left: 0;
+		}
+	}
+	@media screen and (max-width: 380px) {
+		>.iconBox{
+			width: 34px;
+		}
+		>span{
+			font-size: 10px;
+		}
+	}
+}
+// banner结束
+// 消防模块开始
+.xfmkBg>img{
+	@media screen and (max-width: 820px) {
+		min-height: 740px;
+	}
+	@media screen and (max-width: 414px) {
+		min-height: 592px;
+	}
+}
+.xfmkImgBox {
+	position: absolute;
+	left: 3%;
+	top: 52%;
+	transform: translate(0, -50%);
+	@media screen and (max-width: 820px) {
+		left: 0;
+		top: 30%;
+		transform: none;
+		max-width: 80%;
+	}
+	@media screen and (max-width: 414px) {
+		left: 0;
+		top: 42%;
+		transform: none;
+		max-width: 100%;
+	}
+}
+
+.xfmkCircle1 {
+	position: absolute;
+	left: 37%;
+	top: 20.5%;
+	@media screen and (max-width: 820px) {
+		left: 39%;
+		top: 24%;
+	}
+	@media screen and (max-width: 414px) {
+		left: 38%;
+		top: 24.5%;
+	}
+}
+.xfmkCircle2 {
+	position: absolute;
+	left: 59%;
+	top: 48.5%;
+	@media screen and (max-width: 414px) {
+		left: 58%;
+		top: 47.5%;
+	}
+}
+.circle {
+	width: 18px;
+	height: 18px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	filter: blur(1px);
+	@media screen and (max-width: 820px) {
+		width: 8px;
+		height: 8px;
+	}
+}
+.circle2 {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 50%;
+	position: absolute;
+	z-index: 2;
+	opacity: 0.7;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	animation: tobig ease 3s infinite;
+	-webkit-animation: tobig ease 3s infinite;
+	@media screen and (max-width: 820px) {
+		animation: tobig_m ease 3s infinite;
+		-webkit-animation: tobig_m ease 3s infinite;
+	}
+}
+.circle3 {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 50%;
+	position: absolute;
+	z-index: 2;
+	opacity: 0.7;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-animation: tobig ease 3s infinite;
+	animation: tobig ease 3s infinite;
+	@media screen and (max-width: 820px) {
+		-webkit-animation: tobig_m ease 3s infinite;
+		animation: tobig_m ease 3s infinite;
+	}
+}
+@keyframes tobig {
+	0% {
+		width: 18px;
+		height: 18px;
+		opacity: 0.7;
+	}
+	100% {
+		width: 50px;
+		height: 50px;
+		opacity: 0;
+	}
+}
+@keyframes tobig_m {
+	0% {
+		width: 8px;
+		height: 8px;
+		opacity: 0.7;
+	}
+	100% {
+		width: 20px;
+		height: 20px;
+		opacity: 0;
+	}
+}
+.xfmk_txt_m1{
+	display: none;
+	font-size: 12px;
+	color: #666;
+	position: absolute;
+	
+	@media screen and (max-width: 820px) {
+		display: block;
+		top: 8%;
+		right: 22%;
+	}
+	@media screen and (max-width: 414px) {
+		display: block;
+		top: 6%;
+		right: 20%;
+	}
+}
+.xfmk_txt_m2{
+	display: none;
+	font-size: 12px;
+	color: #666;
+	position: absolute;
+	
+	@media screen and (max-width: 820px) {
+		display: block;
+		top: 60%;
+		right: 3%;
+	}
+	@media screen and (max-width: 414px) {
+		top: 58%;
+		right: -8%;
+	}
+}
+.xfmkTxt{
+	position: absolute;
+	right: 11%;
+	top: 34.5%;
+	>.redLine_normal{
+		margin-top: 55px;
+		margin-bottom: 50px;
+	}
+	@media screen and (max-width: 820px) {
+		right: 0;
+		left: 0;
+		top: 57px;
+		>.txt_title1{
+			font-size: 22px;
+		}
+		>.redLine_normal{
+			margin-top: 30px;
+			margin-bottom: 26px;
+		}
+		>.txt_subtitle1,.xfmkTxt_subtitle{
+			font-size: 12px;
+			margin-bottom: 4px;
+		}
+	}
+	
+}
+.xfmkTxt_title{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.xfmkTxt_subtitle{
+	font-size: 18px;
+	color: #666;
+	margin-bottom: 12px;
+}
+// 消防模块结束
+// 模块化设计开始
+.mkhsjBox{
+	padding: 154px 0 40px 0;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media screen and (max-width: 820px) {
+		padding: 57px 0 47px 0;
+	}
+}
+.mkhsjTxt{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	>.txt_subtitle1{
+		text-align: center;
+		width: 88%;
+		line-height: 36px;
+		margin-top: 10px;
+	}
+	@media screen and (max-width: 820px) {
+		>.txt_title1{
+			font-size: 20px;
+			line-height: 36px;
+		}
+		>.redLine_normal{
+			margin-top: 18px;
+		}
+		>.txt_subtitle1{
+			font-size: 12px;
+			line-height: 20px;
+			margin-top: 16px;
+		}
+	}
+}
+.mkhsjImg{
+	@media screen and (max-width: 820px) {
+		margin-top: 25px;
+	}
+}
+// 模块化设计结束
+// 多场景开始
+.dcjTxt{
+	@media screen and (max-width: 820px) {
+		>.txt_title1{
+			font-size: 20px;
+		}
+	}
+}
+.title2{
+	max-width: 560px;
+	font-size: 22px;
+	color: #fff;
+	line-height: 35px;
+	margin-top: 40px;
+}
+.dcj_subtitle{
+	color: #fff;
+	font-size: 18px;
+	margin-top: 30px;
+	max-width: 520px;
+	line-height: 37px;
+	@media screen and (max-width: 820px) {
+		font-size: 12px;
+		line-height: 22px;
+		margin-top: 10px;
+	}
+}
+.gnBox2{
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+	>div{
+		padding: 0 38px;
+		position: relative;
+		&::after{
+			content: '';
+			width: 1px;
+			height: 95%;
+			background-color: rgb(212,212,212);
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
+	}
+	>div:nth-child(1){
+		padding-left: 0;
+	}
+	>div:nth-last-child(1){
+		&::after{
+			content: '';
+			width: 0;
+			height: 0;
+		}
+	}
+	@media screen and (max-width: 820px) {
+		margin-top: 30px;
+		>div{
+			padding: 0 15px;
+			&::after{
+				height: 85%;
+				background-color: rgba(212,212,212,0.5);
+			}
+		}
+	}
+}
+.gnItem2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	>div{
+		margin-bottom: 7px;
+	}
+	>span{
+		font-size: 14px;
+		color: rgb(246,246,246);
+	}
+	@media screen and (max-width: 820px) {
+		>div{
+			max-width: 18px;
+			height: 26px;
+			display: flex;
+			flex-direction: column;
+			>img{
+				margin-top: auto;
+			}
+		}
+		>span{
+			font-size: 12px;
+			white-space: nowrap;
+		}
+	}
+	@media screen and (max-width: 380px) {
+		>div{
+			max-width: 17.5px;
+		}
+		>span{
+			font-size: 12px;
+		}
+	}
+}
+// 多场景结束
+// 产品开始
+.cpBox{
+	padding: 230px 0 142px 0;
+	background-color: rgb(245,245,245);
+	position: relative;
+	@media screen and (max-width: 820px) {
+		padding: 24px 0;
+		display: flex;
+		justify-content: center;
+	}
+}
+.centerBox{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.cpImgBox{
+	margin-left: 11%;
+	@media screen and (max-width: 820px) {
+		margin-left: 0;
+		max-width: 67%;
+	}
+}
+.cpMsg{
+	position: absolute;
+	right: 5.5%;
+	top: 180px;
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 820px) {
+		display: none;
+	}
+}
+.cpMsgBox_m{
+	display: none;
+	@media screen and (max-width: 820px) {
+		display: block;
+		
+	}
+}
+.cpMsg_m{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	padding-top: 35px;
+	>.txt_title1{
+		font-size: 20px;
+	}
+}
+.cpMsg_tab{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 34px;
+	>div{
+		margin-right: 46px;
+		&:nth-last-child(1){
+			margin-right: 0;
+		}
+	}
+	@media screen and (max-width: 820px) {
+		margin-top: 20px;
+		>div{
+			margin-right: 0;
+			margin-bottom: 12px;
+			&:nth-child(1){
+				margin-right: 24px;
+			}
+			&:nth-last-child(1){
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.cpItem{
+	width: 222px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	color: rgb(51,51,51);
+	border: 1px solid rgb(128,128,128);
+	border-radius: 24px;
+	cursor: pointer;
+	transition: all ease .4s;
+	&:hover{
+		border: 1px solid $redfont2;
+	}
+	@media screen and (max-width: 820px) {
+		width: 126px;
+		height: 26px;
+		
+		line-height: 26px;
+		font-size: 12px;
+	}
+}
+.actTab{
+	border: 1px solid $redfont2!important;
+}
+.canshuBox{
+	width: 860px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 60px;
+	>div{
+		margin-bottom: 46px;
+	}
+	@media screen and (max-width: 820px) {
+		width: 100%;
+		margin-top: 30px;
+		>div{
+			margin-bottom: 20px;
+		}
+	}
+}
+.canshuItem{
+	width: 33.33%;
+	display: flex;
+	flex-direction: column;
+}
+.canshu_title{
+	font-size: 20px;
+	color: rgb(77,77,77);
+	font-weight: bold;
+	@media screen and (max-width: 820px) {
+		font-size: 12px;
+	}
+}
+.canshu_value{
+	font-size: 18px;
+	color: #666;
+	margin-top: 4px;
+	word-break: break-all;
+	@media screen and (max-width: 820px) {
+		font-size: 12px;
+	}
+}
+// 产品结束
+#contactBox{
+	padding-bottom: 120px;
+	padding-top: 132px;
+	@media screen and (max-width: 820px) {
+		padding-top: 57px;
+		padding-bottom: 0px;
+	}
+}
+@media screen and (min-width:3000px){
+	.mkhsjBox {
+		padding: 200px 0;
+	}
+	.cpImgBox {
+		margin-left: 20%;
+	}
+	.cpMsg{
+		right: 15%;
+	}
+}
+@media screen and (min-width:4000px){
+	.mkhsjBox {
+		padding: 400px 0;
+	}
+	.cpBox{
+		padding: 600px;
+	}
+	.cpImgBox {
+		margin-left: 22%;
+	}
+	.cpMsg{
+		right: 23.5%;
+	}
+	.cpMsg{
+		top:490px;
+	}
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- <base href="http://127.0.0.1:8848/yiyuan/"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>电池管理 | 一元电气科技有限公司</title>
+		<meta name="description" content="一元科技集团是一家专业从事电源产品开发、生产、营销及服务的高新技术企业。目前公司拥有一元电气科技、浙江一元、温州一元进出口、丽水一元、深圳一元电气、深圳市一元科技、湖北一元科技等十大全资公司。主要生产经营稳压器（AVR）、逆变电源 （INV）、储能逆变一体机、储能变流器（PCS）、集装箱式储能柜、UPS不间断电源、EPS消防应急电源、风力光伏发电系统、变频器、MPPT太阳能控制器、调压器、变压器等系列产品。是国家高新技术企业、中国电气行业十大知名品牌，2017年度中国稳压器十大品牌 。" />
+		<meta name="keywords" content="一元电气,一元电气官网,一元电气科技有限公司,一元科技集团官网,深圳一元,深圳一元电气,丽水一元,丽水一元电气,有源滤波器,静止无功发生器,混合型动态无功补偿装置,自动电压调节器,稳压器,储能一体机,储能系统,光储充,电池包,逆变器,太阳能控制器" />
+		<link rel="shortcut icon" href="../../../static/favicon.ico" />
+		<!-- 公样式 -->
+		<link rel="stylesheet" type="text/css" href="../../../static/css/scrollbar.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../../static/css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../../../static/css/footer.css" />
+		<!-- 图标 -->
+		<link rel="stylesheet" type="text/css" href="../../../static/css/iconfont.css" />
+		<!-- 插件样式 -->
+		<link rel="stylesheet" type="text/css" href="../../../plugins/animate.css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../plugins/element-ui/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../plugins/swiper-5.4.5/package/css/swiper.min.css" />
+		<!-- 页面样式 -->
+		<link rel="stylesheet" type="text/css" href="../../../static/css/project/dcgl/index.css" />
+		<script type="text/javascript">
+			var level=2;
+		</script>
+	</head>
+	<body>
+		<!-- 头部开始 -->
+		<yiy-header id="navHead"></yiy-header>
+		<!-- 头部结束 -->
+		<!-- 页面内容开始 -->
+		<div id="appProjectCenter" class="content">
+			<!-- banner -->
+			<div class="bannerBox">
+				<div class="bgImg">
+					<img src="../../../static/image/project/dcgl/index/banner.jpg" alt="" class="pc_bg"/>
+					<img src="../../../static/image/project/dcgl/index/m/banner.jpg" alt="" class="m_bg"/>
+				</div>
+				<div class="bannerTitle">
+					<h1 class="title_big see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">电池管理</h1>
+					<div class="title_redLine see_fadeInUpLine" data-wow-duration="1s" data-wow-delay="0.4s"  ></div>
+					<div class="title_msg">
+						<div class="see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"  >
+							<p class="title_msg1">12+</p>
+							<p class="title_msg2">BMS功能</p>
+						</div>
+						<div class="see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"  >
+							<p class="title_msg1">A级</p>
+							<p class="title_msg2">电池电芯</p>
+						</div>
+						<div class="see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s"  >
+							<p class="title_msg1">1GW</p>
+							<p class="title_msg2">全球装机容量</p>
+						</div>
+					</div>
+				</div>
+				<!-- 分类导航 -->
+				<div class="typeTab" id="typeBox">
+					<div class="tabBox">
+						<div :class="actTabIndex==0?'actTab':''" @click="changeTab('0')"><span class="see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"  >相关产品</span></div>
+						<div :class="actTabIndex==1?'actTab':''" @click="changeTab('1')"><span class="see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s"  >优势介绍</span></div>
+						<div :class="actTabIndex==2?'actTab':''" @click="changeTab('2')"><span class="see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"  >下载中心</span></div>
+					</div>
+				</div>
+			</div>
+			<!-- 分类内容 -->
+			<div class="typeMsgBox" id="typeMsgBox">
+				<!-- 相关产品 -->
+				<div class="centerBox projectContent" v-if="actTabIndex==0" >
+					<div class="project_item see_fadeInUp" :data-wow-delay="index%2==0?'0.2s':'0.4s'" v-for="(item,index) in projectData" :key="index" @click="toProject(item)">
+						<div class="project_txt">
+							<h1 class="project_title">{{item.title}}</h1>
+							<div class="project_line"></div>
+							<h4 class="project_subtitle">{{item.subtitle}}</h4>
+							<div class="btnMore">
+								<span>了解更多</span>
+								<img src="../../../static/image/projectcenter/goright.png" alt="">
+							</div>
+						</div>
+						<div class="project_img">
+							<img :src="''+item.img" alt="">
+						</div>
+						
+					</div>
+				</div>
+				<!-- 优势介绍 -->
+				<!-- 板块1开始 -->
+				<div class="cplbBox" v-if="actTabIndex==1">
+					<div class="cplbContent">
+						<div class="cplbBg">
+							<div class="cpBox_left cp1 see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" @mouseenter="changeYsIndex(0)">
+								<div class="circle_right"></div>
+								<p class="cp_title"><i class="iconfont icon-dianchidianliangdi"></i>磷酸铁锂电池</p>
+								<p class="cp_subTitle">循环寿命3500次以上，电热峰值350°C以上，同体积下容量更大</p>
+							</div>
+							<div class="cpBox_left cp2 see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" @mouseenter="changeYsIndex(1)">
+								<div class="circle_right"></div>
+								<p class="cp_title"><i class="iconfont icon-tubiao-"></i>预充预防</p>
+								<p class="cp_subTitle">增加电池使用寿命，避免电池过充、浮充、过放等多种问题</p>
+							</div>
+							<div class="cpBox_right cp3 see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" @mouseenter="changeYsIndex(2)">
+								<div class="circle_left"></div>
+								<p class="cp_title"><i class="iconfont icon-jidianqi"></i>继电器式BMS</p>
+								<p class="cp_subTitle2">可承受更大电流，更加稳定</p>
+							</div>
+							<div class="cpBox_right cp4 see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" @mouseenter="changeYsIndex(3)">
+								<div class="circle_left"></div>
+								<p class="cp_title"><i class="iconfont icon-duocengjiegou"></i>多层级管理</p>
+								<p class="cp_subTitle2">从PACK到电站多层级管理</p>
+							</div>
+							<img src="../../../static/image/project/dnzl/av2.png" class="pc_bg blockImg" alt="">
+						</div>
+						<div class="cpImg">
+							<div class="cpImgBox" >
+								<img src="../../../static/image/project/dcgl/index/p1.png" alt="" class="see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+								<span class="imgTxt">电池包</span>
+							</div>
+							<img src="../../../static/image/project/dnzl/av2.png" class="m_bg blockImg" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- 板块1结束 -->
+				<!-- 板块2开始 -->
+				<div class="partBox" v-if="actTabIndex==1">
+					<div class="bgImg">
+						<img src="../../../static/image/project/cnwdw/index/bg1.jpg" class="pc_bg" alt="">
+						<img src="../../../static/image/project/cnwdw/index/m/bg1.jpg" class="m_bg" alt="">
+					</div>
+					<div class="bk2Txt">
+						<p class="txt_title1 whiteTxt">全球产品认证</p>
+						<div class="redLine2_normal"></div>
+						<p class="bk2Txt_subtitle whiteTxt">一元的产品已经覆盖到全球50+的国家与地球，多款产品先后获得CE/TUV/UN38.3/MSDS等多家国际权威认证机构的认证与测试，满足国内及国际产品标准。</p>
+					</div>
+				</div>
+				<!-- 板块2结束 -->
+				<!-- 板块3开始 -->
+				<div class="conditionBox" v-if="actTabIndex==1">
+					<div class="box1536 conditionMsgBox">
+						<p class="conditionMsg_title1 see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"  >完善的工程服务体系</p>
+						<div class="conditionImgBox">
+							<div class="conditionImg_item1 see_fadeInUp"  data-wow-duration="1s" data-wow-delay="0.2s"  >
+								<div class="conditionImg_zdc" >
+									<div class="conditionImg_zdc_msg">
+										<p class="conditionImg_en">R & D TEAM</p>
+										<p class="conditionImg_title">专业高效的研发团队</p>
+										<div class="conditionImg_line"></div>
+									</div>
+								</div>
+							</div>
+							<div class="conditionImg_item2 see_fadeInUp"  data-wow-duration="1s" data-wow-delay="0.3s"  >
+								<div class="conditionImg_zdc" >
+									<div class="conditionImg_zdc_msg">
+										<p class="conditionImg_en">SOLUTION</p>
+										<p class="conditionImg_title">一站式电力系统的解决方案</p>
+										<div class="conditionImg_line"></div>
+				
+									</div>
+								</div>
+							</div>
+							<div class="conditionImg_item3 see_fadeInUp"  data-wow-duration="1s" data-wow-delay="0.4s"  >
+								<div class="conditionImg_zdc" >
+									<div class="conditionImg_zdc_msg">
+										<p class="conditionImg_en">RESPONSE SPEED</p>
+										<p class="conditionImg_title">及时高效的响应速度</p>
+										<div class="conditionImg_line"></div>
+									</div>
+								</div>
+							</div>
+							<div class="conditionImg_item4 see_fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s"  >
+								<div class="conditionImg_zdc" >
+									<div class="conditionImg_zdc_msg">
+										<p class="conditionImg_en">TRAINING SERVICES</p>
+										<p class="conditionImg_title">一对一培训服务</p>
+										<div class="conditionImg_line"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 板块3结束 -->
+				<!-- 下载中心 -->
+				<div class="centerBox xzzxBox" v-if="actTabIndex==2">
+					<div class="xzContent">
+						<div class="xzBg">
+							<img src="../../../static/image/project/dcgl/index/xzzx.jpg" class="blockImg" alt="">
+						</div>
+						<a href="../../../static/files/储能画册.pdf" class="xzZdc"  target="_blank">
+							<div class="xzTxt">
+								<p class="xzTxt_title">电池管理</p>
+								<p class="xzTxt_subTitle">储能画册</p>
+							</div>
+							<div class="xzLogo">
+								<i class="iconfont icon-xiazai"></i>
+								<span>Download</span>
+							</div>
+						</a>
+					</div>
+					<div class="xzContent">
+						<div class="xzBg">
+							<img src="../../../static/image/project/dcgl/index/xzzx.jpg" class="blockImg" alt="">
+						</div>
+						<a href="../../../static/files/大型储能画册.pdf" class="xzZdc"  target="_blank">
+							<div class="xzTxt">
+								<p class="xzTxt_title">电池管理</p>
+								<p class="xzTxt_subTitle">大型储能画册</p>
+							</div>
+							<div class="xzLogo">
+								<i class="iconfont icon-xiazai"></i>
+								<span>Download</span>
+							</div>
+						</a>
+					</div>
+					<div class="xzContent">
+						<div class="xzBg">
+							<img src="../../../static/image/project/dcgl/index/xzzx.jpg" class="blockImg" alt="">
+						</div>
+						<a href="../../../static/files/逆变器画册.pdf" class="xzZdc"  target="_blank">
+							<div class="xzTxt">
+								<p class="xzTxt_title">电池管理</p>
+								<p class="xzTxt_subTitle">逆变器画册</p>
+							</div>
+							<div class="xzLogo">
+								<i class="iconfont icon-xiazai"></i>
+								<span>Download</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 页面内容结束 -->
+		<!-- 联系我们开始 -->
+		<div class="box100"  id="contactBox">
+			<div class="contactBox" >
+				<div class="contact_left see_fadeInLeft">
+					<p class="contact_title">联系我们</p>
+					<div class="redLine_contact"></div>
+					<p class="contact_txt">如果您有任何的需要，请随时与我们联系。</p>
+					<div class="inputBox">
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的姓名" v-model="userName" />
+						</div>
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的公司" v-model="userCompany"/>
+						</div>
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的电话" v-model="userPhone"/>
+						</div>
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的邮箱" v-model="userMail"/>
+						</div>
+					</div>
+					<div class="liuyan">
+						<i class="iconfont icon-xinghao"></i>
+						<textarea rows="" cols="" placeholder="请输入留言内容" v-model="userLy"></textarea>
+					</div>
+					<div class="btn_liuyan" @click="subLy()">提交留言</div>
+				</div>
+				<div class="contact_right see_fadeInRight">
+					<div class="contactTypeBox">
+						<div class="telBox">
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon">
+									<i class="iconfont icon-phone"></i>
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>销售热线</p>
+									<p>{{telMsg.rexian}}</p>
+								</div>
+							</div>
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon">
+									<i class="iconfont icon-yunchuanzhen"></i>
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>公司传真</p>
+									<p>{{telMsg.chuanzhen}}</p>
+								</div>
+							</div>
+						</div>
+						<div class="addressBox">
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon">
+									<i class="iconfont icon-dingweixiao"></i>
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>{{addressMsg[0].name}}</p>
+									<p>{{addressMsg[0].add}}</p>
+								</div>
+							</div>
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon" style="opacity: 0;">
+									<!-- <i class="iconfont icon-zuoji"></i> -->
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>{{addressMsg[1].name}}</p>
+									<p>{{addressMsg[1].add}}</p>
+								</div>
+							</div>
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon" style="opacity: 0;">
+									<!-- <i class="iconfont icon-zuoji"></i> -->
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>{{addressMsg[2].name}}</p>
+									<p>{{addressMsg[2].add}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 联系我们结束 -->
+		<!-- 去顶部按钮 -->
+		<div class="toTopBtn" onclick="toTop()">
+			<i class="iconfont icon-huidaodingbu"></i>
+		</div>
+		<!-- 底部开始 -->
+		<yiy-footer id="navFooter"></yiy-footer>
+		<!-- 底部结束 -->
+		<!-- 脚本引入开始 -->
+		<!-- 公共方法 -->
+		<script src="../../../static/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 插件引入 -->
+		<script src="../../../plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../plugins/element-ui/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../plugins/wow/wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../plugins/swiper-5.4.5/package/js/swiper.min.js" type="text/javascript" charset="utf-8">
+		</script>
+		<!-- 页面脚本引入 -->
+		<script src="../../../static/js/header_new_l2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../static/js/footer_l2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../static/js/project/dcgl/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../static/js/public.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 脚本引入结束 -->
+	</body>
+</html>

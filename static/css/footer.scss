@@ -1,0 +1,155 @@
+$redfont: #910000;
+.footer {
+	width: 100%;
+	background-color: rgb(0, 0, 0);
+}
+.footerBox {
+	width: 80%;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.footLogo {
+	width: 100%;
+	padding: 50px 0px 36px 0px;
+	border-bottom: 1px solid rgba(153, 153, 153, 0.5);
+	@media screen and (max-width: 920px) {
+		padding: 50px 0px 23px 0px;
+		border-bottom: 1px solid rgba(255,255,255, 0.15);
+	}
+}
+
+.logoBox {
+	>a{
+		display: inline-block;
+	}
+	> a > img {
+		display: block;
+	}
+	@media screen and (max-width: 820px) {
+		>a>img{
+			width: 60%;
+		}
+	}
+}
+.shareBox {
+	width: 100%;
+	padding: 23px 0px 18px 0px;
+	display: flex;
+	border-bottom: 1px solid rgba(153, 153, 153, 0.5);
+	position: relative;
+	@media screen and (max-width: 920px) {
+		border-bottom: none;
+		padding: 10px 0px 18px 0px;
+	}
+}
+.shareContent {
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform: translate(0%, -50%);
+	margin-left: auto;
+}
+.shareUl {
+	> li {
+		float: left;
+		color: #fff;
+		margin-left: 10px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+		background-color: #000;
+		transition: all ease 0.4s;
+		border: 1px solid rgba(153, 153, 153, 0.5);
+		> i {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:nth-child(1) > i {
+			font-size: 30px;
+		}
+		&:nth-child(2) > i {
+			font-size: 20px;
+		}
+		&:nth-child(3) > i {
+			font-size: 20px;
+		}
+		&:nth-child(4) > i {
+			font-size: 20px;
+		}
+		&:hover {
+			cursor: pointer;
+			background-color: $redfont;
+			> .toShow {
+				opacity: 1;
+				left: 50%;
+			}
+		}
+	}
+}
+.footer_tab_link {
+	width: 100%;
+	> a {
+		margin-right: 3.5%;
+		color: #939393;
+		transition: color ease 0.3s;
+		font-size: 16px;
+		&:hover {
+			color: #fff;
+		}
+	}
+	@media screen and (max-width: 920px) {
+		display: flex;
+		flex-direction: column;
+		> a {
+			padding: 10px 0px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+			margin-right: 0;
+			font-size: 14px;
+		}
+	}
+}
+.toShow {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: -110px;
+	left: 120%;
+	transform: translate(-50%, 0%);
+	background-color: $redfont;
+	opacity: 0;
+	transition: all ease 0.4s;
+	transition-delay: 0.1s;
+	> img {
+		width: 100%;
+		height: 100%;
+	}
+}
+// 版权
+.banquanBox {
+	width: 100%;
+	display: flex;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	> span,
+	a {
+		color: rgb(116, 116, 116);
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
+.banquanBox_m {
+	width: 100%;
+	display: none;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	> span {
+		color: rgb(116, 116, 116);
+		font-size: 14px;
+		font-weight: bold;
+	}
+}

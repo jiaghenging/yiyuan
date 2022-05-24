@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- <base href="http://127.0.0.1:8848/yiyuan/"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>马达式稳压器 | 一元电气科技有限公司</title>
+		<meta name="description" content="一元科技集团是一家专业从事电源产品开发、生产、营销及服务的高新技术企业。目前公司拥有一元电气科技、浙江一元、温州一元进出口、丽水一元、深圳一元电气、深圳市一元科技、湖北一元科技等十大全资公司。主要生产经营稳压器（AVR）、逆变电源 （INV）、储能逆变一体机、储能变流器（PCS）、集装箱式储能柜、UPS不间断电源、EPS消防应急电源、风力光伏发电系统、变频器、MPPT太阳能控制器、调压器、变压器等系列产品。是国家高新技术企业、中国电气行业十大知名品牌，2017年度中国稳压器十大品牌 。" />
+		<meta name="keywords" content="一元电气,一元电气官网,一元电气科技有限公司,一元科技集团官网,深圳一元,深圳一元电气,丽水一元,丽水一元电气,有源滤波器,静止无功发生器,混合型动态无功补偿装置,自动电压调节器,稳压器,储能一体机,储能系统,光储充,电池包,逆变器,太阳能控制器" />
+		<link rel="shortcut icon" href="../../../static/favicon.ico" />
+		<!-- 公样式 -->
+		<link rel="stylesheet" type="text/css" href="../../../static/css/scrollbar.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../../static/css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../../../static/css/footer.css" />
+		<!-- 图标 -->
+		<link rel="stylesheet" type="text/css" href="../../../static/css/iconfont.css" />
+		<!-- 插件样式 -->
+		<link rel="stylesheet" type="text/css" href="../../../plugins/animate.css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../plugins/element-ui/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../plugins/swiper-5.4.5/package/css/swiper.min.css" />
+		<!-- 页面样式 -->
+		<link rel="stylesheet" type="text/css" href="../../../static/css/project/dnzl/svc.css" />
+		<script type="text/javascript">
+			var level=2;
+		</script>
+	</head>
+	<body>
+		<!-- 头部开始 -->
+		<yiy-header id="navHead"></yiy-header>
+		<!-- 头部结束 -->
+		<!-- 页面内容开始 -->
+		<div id="appSvc" class="content">
+			<!-- banner -->
+			<div class="partBox">
+				<div class="bgImg">
+					<img src="../../../static/image/project/dnzl/svc/banner.jpg" class="pc_bg" alt="" />
+					<img src="../../../static/image/project/dnzl/svc/m/banner.jpg" class="m_bg" alt="" />
+				</div>
+				<div class="bannerTitle">
+					<h1 class="title_en see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">SVC &ensp;/&nbsp;TSS&ensp;/&ensp;PRO&ensp;/&ensp;TNS&ensp;/&ensp;PRO3</h1>
+					<p class="title_big see_fadeInUp"  data-wow-duration="1s" data-wow-delay="0.4s" >马达式稳压器</p>
+					<h2 class="title_mid see_fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">高效节能 快速调节</h2>
+				</div>
+			</div>
+			<!-- banner结束 -->
+			<!-- 轮播板块开始 -->
+			<div class="partSwiper">
+				<div class="bgImg lbBg">
+					<img src="../../../static/image/project/dnzl/avr/swiperbg.jpg" class="blockImg" alt="">
+				</div>
+				<!-- Swiper -->
+				    <div class="swiper mySwiper">
+				      <div class="swiper-wrapper">
+				        <div class="swiper-slide" v-for="(item,index) in swiperMsg" :key="index">
+							<div class="projectImgBox">
+								<img :src="item.img" alt="" :class="'projectImg'+item.num">
+							</div>
+						</div>
+						
+				      </div>
+					  <img src="../../../static/image/project/dnzl/halo.png" alt="" class="haloImg_swiper">
+				    </div>
+				<!-- Swiper结束 -->
+					<div class="projectMsg">
+						<div class="projectMsg_box">
+							<div class="projectMsg_header">
+								<div class="projectMsg_header_title">
+									<h1>PRO</h1>
+									<h1>单相马达式稳压器</h1>
+								</div>
+								<div class="redLine"></div>
+							</div>
+							<!-- 数据区域 -->
+								<!-- 参数 -->
+								<div class="canshu animate__animated animate__fadeInLeft" v-show="proMsg.state==0">
+									<div class="canshuItem" v-for="(item,index) in proMsg.canshu" :key="index">
+										<span class="canshu_title">{{item.title}}</span>
+										<span class="canshu_value">&ensp;{{item.value}}</span>
+									</div>
+								</div>
+								<!-- 型号容量尺寸 -->
+								<div class="guige" v-show="proMsg.state==1">
+									<el-table
+									    :data="proMsg.guige"
+									    height="100%"
+										stripe
+									    style="width: 100%">
+									    <el-table-column
+									      prop="name"
+									      label="型号"
+									      width="190"
+										  align="center">
+									    </el-table-column>
+									    <el-table-column
+									      prop="capacity"
+									      label="容量"
+									       width="170"
+										  align="center">
+									    </el-table-column>
+									    <el-table-column
+									      prop="size"
+									      label="尺寸 (宽*深*高) mm"
+										  width="310"
+										  align="center">
+									    </el-table-column>
+									  </el-table>
+								</div>
+							<!-- 切换按钮 -->
+							<div class="tab_btnBox">
+								<div :class="proMsg.state==0?'actBtn':''" @click="proMsg.state=0">主要参数</div>
+								<div :class="proMsg.state==1?'actBtn':''" @click="proMsg.state=1">型号/容量/尺寸</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="lbMsgBox_m">
+				<div class="projectMsg_box">
+					<div class="projectMsg_header">
+						<div class="projectMsg_header_title">
+							<h1>PRO</h1>
+							<h1>单相马达式稳压器</h1>
+						</div>
+						<div class="redLine"></div>
+					</div>
+					<!-- 数据区域 -->
+						<!-- 参数 -->
+						<div class="canshu animate__animated animate__fadeInLeft" v-show="proMsg.state==0">
+							<div class="canshuItem" v-for="(item,index) in proMsg.canshu" :key="index">
+								<span class="canshu_title">{{item.title}}</span>
+								<span class="canshu_value">&ensp;{{item.value}}</span>
+							</div>
+						</div>
+						<!-- 型号容量尺寸 -->
+						<div class="guige" v-show="proMsg.state==1">
+							<el-table
+							    :data="proMsg.guige"
+							    height="100%"
+								stripe
+							    style="width: 100%">
+							    <el-table-column
+							      prop="name"
+							      label="型号"
+								min-width="40%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="capacity"
+							      label="容量"
+							     min-width="25%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="size"
+							      label="尺寸 (宽*深*高) mm"
+								 min-width="40%"
+								  align="center">
+							    </el-table-column>
+							  </el-table>
+						</div>
+					<!-- 切换按钮 -->
+					<div class="tab_btnBox">
+						<div :class="proMsg.state==0?'actBtn':''" @click="proMsg.state=0">主要参数</div>
+						<div :class="proMsg.state==1?'actBtn':''" @click="proMsg.state=1">型号/容量/尺寸</div>
+					</div>
+				</div>
+			</div>
+			<!-- 轮播板块结束 -->
+			
+			<!-- tss开始 -->
+			<div class="partPr">
+				<div class="bgImg proBg">
+					<img src="../../../static/image/project/dnzl/avr/bg2.jpg" class="blockImg" alt="">
+				</div>
+				<div class="pr_img">
+					<img src="../../../static/image/project/dnzl/svc/tss.png" class="blockImg" alt="">
+				</div>
+				<div class="projectMsg2">
+					<div class="projectMsg_box2">
+						<div class="projectMsg_header">
+							<div class="projectMsg_header_title">
+								<h1>TSS</h1>
+								<h1>壁挂单相马达式稳压器</h1>
+							</div>
+							<div class="redLine"></div>
+						</div>
+						<!-- 数据区域 -->
+							<!-- 参数 -->
+							<div class="canshu animate__animated animate__fadeInLeft" v-show="tssMsg.state==0">
+								<div class="canshuItem" v-for="(item,index) in tssMsg.canshu" :key="index">
+									<span class="canshu_title">{{item.title}}</span>
+									<span class="canshu_value">&ensp;{{item.value}}</span>
+								</div>
+							</div>
+							<!-- 型号容量尺寸 -->
+							<div class="guige" v-show="tssMsg.state==1">
+								<el-table
+								    :data="tssMsg.guige"
+								    height="100%"
+									stripe
+								    style="width: 100%">
+								    <el-table-column
+								      prop="name"
+								      label="型号"
+								     :width="screenWidth<820?'80':'170'"
+									  align="center">
+								    </el-table-column>
+								    <el-table-column
+								      prop="capacity"
+								      label="容量"
+								      width="170"
+									  align="center">
+								    </el-table-column>
+								    <el-table-column
+								      prop="size"
+								      label="尺寸 (宽*深*高) mm"
+									  width="310"
+									  align="center">
+								    </el-table-column>
+								  </el-table>
+							</div>
+						<!-- 切换按钮 -->
+						<div class="tab_btnBox">
+							<div :class="tssMsg.state==0?'actBtn':''" @click="tssMsg.state=0">主要参数</div>
+							<div :class="tssMsg.state==1?'actBtn':''" @click="tssMsg.state=1">型号/容量/尺寸</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tssMsgBox_m">
+				<div class="projectMsg_box2">
+					<div class="projectMsg_header">
+						<div class="projectMsg_header_title">
+							<h1>TSS</h1>
+							<h1>壁挂单相马达式稳压器</h1>
+						</div>
+						<div class="redLine"></div>
+					</div>
+					<!-- 数据区域 -->
+						<!-- 参数 -->
+						<div class="canshu animate__animated animate__fadeInLeft" v-show="tssMsg.state==0">
+							<div class="canshuItem" v-for="(item,index) in tssMsg.canshu" :key="index">
+								<span class="canshu_title">{{item.title}}</span>
+								<span class="canshu_value">&ensp;{{item.value}}</span>
+							</div>
+						</div>
+						<!-- 型号容量尺寸 -->
+						<div class="guige" v-show="tssMsg.state==1">
+							<el-table
+							    :data="tssMsg.guige"
+							    height="100%"
+								stripe
+							    style="width: 100%">
+							    <el-table-column
+							      prop="name"
+							      label="型号"
+							     min-width="40%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="capacity"
+							      label="容量"
+							     min-width="25%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="size"
+							      label="尺寸 (宽*深*高) mm"
+								  min-width="45%"
+								  align="center">
+							    </el-table-column>
+							  </el-table>
+						</div>
+					<!-- 切换按钮 -->
+					<div class="tab_btnBox">
+						<div :class="tssMsg.state==0?'actBtn':''" @click="tssMsg.state=0">主要参数</div>
+						<div :class="tssMsg.state==1?'actBtn':''" @click="tssMsg.state=1">型号/容量/尺寸</div>
+					</div>
+				</div>
+			</div>
+			<!-- tss结束 -->
+			<!-- pro-3开始 -->
+			<div class="partTrs">
+				<div class="bgImg">
+					<img src="../../../static/image/project/dnzl/avr/swiperbg.jpg" class="blockImg" alt="">
+				</div>
+				<img src="../../../static/image/project/dnzl/halo.png" alt="" class="haloImg_pro3">
+				<div class="haloImgBox">
+					<img src="../../../static/image/project/dnzl/svc/pro-3.png" alt="">
+				</div>
+				<div class="projectMsg3">
+					<div class="projectMsg_box3">
+						<div class="projectMsg_header">
+							<div class="projectMsg_header_title">
+								<h1>PRO-3</h1>
+								<h1>三相马达式稳压器</h1>
+							</div>
+							<div class="redLine"></div>
+						</div>
+						<!-- 数据区域 -->
+							<!-- 参数 -->
+							<div class="canshu animate__animated animate__fadeInLeft" v-show="pro3Msg.state==0">
+								<div class="canshuItem" v-for="(item,index) in pro3Msg.canshu" :key="index">
+									<span class="canshu_title">{{item.title}}</span>
+									<span class="canshu_value">&ensp;{{item.value}}</span>
+								</div>
+							</div>
+							<!-- 型号容量尺寸 -->
+							<div class="guige" v-show="pro3Msg.state==1">
+								<el-table
+								    :data="pro3Msg.guige"
+								    height="100%"
+									stripe
+								    style="width: 100%">
+								    <el-table-column
+								      prop="name"
+								      label="型号"
+								     width="170"
+									  align="center">
+								    </el-table-column>
+								    <el-table-column
+								      prop="capacity"
+								      label="容量"
+								     width="170"
+									  align="center">
+								    </el-table-column>
+								    <el-table-column
+								      prop="size"
+								      label="尺寸 (宽*深*高) mm"
+									 width="310"
+									  align="center">
+								    </el-table-column>
+								  </el-table>
+							</div>
+						<!-- 切换按钮 -->
+						<div class="tab_btnBox">
+							<div :class="pro3Msg.state==0?'actBtn':''" @click="pro3Msg.state=0">主要参数</div>
+							<div :class="pro3Msg.state==1?'actBtn':''" @click="pro3Msg.state=1">型号/容量/尺寸</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tssMsgBox_m">
+				<div class="projectMsg_box3">
+					<div class="projectMsg_header">
+						<div class="projectMsg_header_title">
+							<h1>PRO-3</h1>
+							<h1>三相马达式稳压器</h1>
+						</div>
+						<div class="redLine"></div>
+					</div>
+					<!-- 数据区域 -->
+						<!-- 参数 -->
+						<div class="canshu animate__animated animate__fadeInLeft" v-show="pro3Msg.state==0">
+							<div class="canshuItem" v-for="(item,index) in pro3Msg.canshu" :key="index">
+								<span class="canshu_title">{{item.title}}</span>
+								<span class="canshu_value">&ensp;{{item.value}}</span>
+							</div>
+						</div>
+						<!-- 型号容量尺寸 -->
+						<div class="guige" v-show="pro3Msg.state==1">
+							<el-table
+							    :data="pro3Msg.guige"
+							    height="100%"
+								stripe
+							    style="width: 100%">
+							    <el-table-column
+							      prop="name"
+							      label="型号"
+							    min-width="40%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="capacity"
+							      label="容量"
+							    min-width="25%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="size"
+							      label="尺寸 (宽*深*高) mm"
+								min-width="35%"
+								  align="center">
+							    </el-table-column>
+							  </el-table>
+						</div>
+					<!-- 切换按钮 -->
+					<div class="tab_btnBox">
+						<div :class="pro3Msg.state==0?'actBtn':''" @click="pro3Msg.state=0">主要参数</div>
+						<div :class="pro3Msg.state==1?'actBtn':''" @click="pro3Msg.state=1">型号/容量/尺寸</div>
+					</div>
+				</div>
+			</div>
+			<!-- pro-3结束 -->
+			<!-- SVC-3开始 -->
+			<div class="partPr">
+				<div class="bgImg svc3Bg">
+					<img src="../../../static/image/project/dnzl/avr/bg2.jpg" class="blockImg" alt="">
+				</div>
+				<div class="pr_img">
+					<img src="../../../static/image/project/dnzl/svc/svc.png" alt="">
+				</div>
+				<div class="projectMsg2">
+					<div class="projectMsg_box2">
+						<div class="projectMsg_header">
+							<div class="projectMsg_header_title">
+								<h1>SVC-3(TNS)</h1>
+								<h1>三相马达式稳压器</h1>
+							</div>
+							<div class="redLine"></div>
+						</div>
+						<!-- 数据区域 -->
+							<!-- 参数 -->
+							<div class="canshu animate__animated animate__fadeInLeft" v-show="svc3Msg.state==0">
+								<div class="canshuItem" v-for="(item,index) in svc3Msg.canshu" :key="index">
+									<span class="canshu_title">{{item.title}}</span>
+									<span class="canshu_value">&ensp;{{item.value}}</span>
+								</div>
+							</div>
+							<!-- 型号容量尺寸 -->
+							<div class="guige" v-show="svc3Msg.state==1">
+								<el-table
+								    :data="svc3Msg.guige"
+								    height="100%"
+									stripe
+								    style="width: 100%">
+								    <el-table-column
+								      prop="name"
+								      label="型号"
+								      width="170"
+									  align="center">
+								    </el-table-column>
+								    <el-table-column
+								      prop="capacity"
+								      label="容量"
+								      width="170"
+									  align="center">
+								    </el-table-column>
+								    <el-table-column
+								      prop="size"
+								      label="尺寸 (宽*深*高) mm"
+									  width="310"
+									  align="center">
+								    </el-table-column>
+								  </el-table>
+							</div>
+						<!-- 切换按钮 -->
+						<div class="tab_btnBox">
+							<div :class="svc3Msg.state==0?'actBtn':''" @click="svc3Msg.state=0">主要参数</div>
+							<div :class="svc3Msg.state==1?'actBtn':''" @click="svc3Msg.state=1">型号/容量/尺寸</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tssMsgBox_m">
+				<div class="projectMsg_box2">
+					<div class="projectMsg_header">
+						<div class="projectMsg_header_title">
+							<h1>SVC-3(TNS)</h1>
+							<h1>三相马达式稳压器</h1>
+						</div>
+						<div class="redLine"></div>
+					</div>
+					<!-- 数据区域 -->
+						<!-- 参数 -->
+						<div class="canshu animate__animated animate__fadeInLeft" v-show="svc3Msg.state==0">
+							<div class="canshuItem" v-for="(item,index) in svc3Msg.canshu" :key="index">
+								<span class="canshu_title">{{item.title}}</span>
+								<span class="canshu_value">&ensp;{{item.value}}</span>
+							</div>
+						</div>
+						<!-- 型号容量尺寸 -->
+						<div class="guige" v-show="svc3Msg.state==1">
+							<el-table
+							    :data="svc3Msg.guige"
+							    height="100%"
+								stripe
+							    style="width: 100%">
+							    <el-table-column
+							      prop="name"
+							      label="型号"
+							      min-width="40%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="capacity"
+							      label="容量"
+							      min-width="25%"
+								  align="center">
+							    </el-table-column>
+							    <el-table-column
+							      prop="size"
+							      label="尺寸 (宽*深*高) mm"
+								 min-width="35%"
+								  align="center">
+							    </el-table-column>
+							  </el-table>
+						</div>
+					<!-- 切换按钮 -->
+					<div class="tab_btnBox">
+						<div :class="svc3Msg.state==0?'actBtn':''" @click="svc3Msg.state=0">主要参数</div>
+						<div :class="svc3Msg.state==1?'actBtn':''" @click="svc3Msg.state=1">型号/容量/尺寸</div>
+					</div>
+				</div>
+			</div>
+			<!-- tss结束 -->
+			
+		</div>
+		<!-- 页面内容结束 -->
+		<!-- 联系我们开始 -->
+		<div class="box100"  id="contactBox">
+			<div class="contactBox">
+				<div class="contact_left see_fadeInLeft">
+					<p class="contact_title">联系我们</p>
+					<div class="redLine_contact"></div>
+					<p class="contact_txt">如果您有任何的需要，请随时与我们联系。</p>
+					<div class="inputBox">
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的姓名" v-model="userName" />
+						</div>
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的公司" v-model="userCompany"/>
+						</div>
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的电话" v-model="userPhone"/>
+						</div>
+						<div class="inputItem">
+							<i class="iconfont icon-xinghao"></i>
+							<input type="text" placeholder="您的邮箱" v-model="userMail"/>
+						</div>
+					</div>
+					<div class="liuyan">
+						<i class="iconfont icon-xinghao"></i>
+						<textarea rows="" cols="" placeholder="请输入留言内容" v-model="userLy"></textarea>
+					</div>
+					<div class="btn_liuyan" @click="subLy()">提交留言</div>
+				</div>
+				<div class="contact_right see_fadeInRight">
+					<div class="contactTypeBox">
+						<div class="telBox">
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon">
+									<i class="iconfont icon-phone"></i>
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>销售热线</p>
+									<p>{{telMsg.rexian}}</p>
+								</div>
+							</div>
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon">
+									<i class="iconfont icon-yunchuanzhen"></i>
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>公司传真</p>
+									<p>{{telMsg.chuanzhen}}</p>
+								</div>
+							</div>
+						</div>
+						<div class="addressBox">
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon">
+									<i class="iconfont icon-dingweixiao"></i>
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>{{addressMsg[0].name}}</p>
+									<p>{{addressMsg[0].add}}</p>
+								</div>
+							</div>
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon" style="opacity: 0;">
+									<!-- <i class="iconfont icon-zuoji"></i> -->
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>{{addressMsg[1].name}}</p>
+									<p>{{addressMsg[1].add}}</p>
+								</div>
+							</div>
+							<div class="contactTypeItem">
+								<div class="contactTypeItem_icon" style="opacity: 0;">
+									<!-- <i class="iconfont icon-zuoji"></i> -->
+								</div>
+								<div class="contactTypeItem_msg">
+									<p>{{addressMsg[2].name}}</p>
+									<p>{{addressMsg[2].add}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 联系我们结束 -->
+		<!-- 去顶部按钮 -->
+		<div class="toTopBtn" onclick="toTop()">
+			<i class="iconfont icon-huidaodingbu"></i>
+		</div>
+		<!-- 底部开始 -->
+		<yiy-footer id="navFooter"></yiy-footer>
+		<!-- 底部结束 -->
+		<!-- 脚本引入开始 -->
+		<!-- 公共方法 -->
+		<script src="../../../static/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 插件引入 -->
+		<script src="../../../plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../plugins/element-ui/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../plugins/wow/wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../plugins/swiper-5.4.5/package/js/swiper.min.js" type="text/javascript" charset="utf-8">
+		</script>
+		<!-- 页面脚本引入 -->
+		<script src="../../../static/js/header_new_l2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../static/js/footer_l2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../static/js/project/dnzl/svc.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../static/js/public.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 脚本引入结束 -->
+	</body>
+</html>

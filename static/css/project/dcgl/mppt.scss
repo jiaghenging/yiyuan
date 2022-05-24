@@ -1,0 +1,266 @@
+$redfont:#910000;
+$redfont2:#c20303;
+.pc_bg{
+	display: block!important;
+	@media screen and (max-width: 820px) {
+		display: none!important;
+	}
+}
+.m_bg{
+	display: none!important;
+	@media screen and (max-width: 820px) {
+		display: block!important;
+	}
+}
+.whiteBox1{
+	color: #000;
+	background: #fff;
+	border: none;
+	border-bottom: none;
+	&::placeholder{
+		color: #000;
+	}
+}
+.partBox{
+	position: relative;
+	
+}
+.bgImg{
+	>img{
+		width: 100%;
+	}
+}
+// banner开始
+.banner{
+	width: 100%;
+	background: url(../../../image/project/cnwdw/mppt/banner.jpg) no-repeat;
+	background-size: cover;
+	height: 940px;
+	background-position:100% 58% ;
+	position: relative;
+}
+.bannerTxt{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 20%;
+	top: 25%;
+	transform: translate(-50%,0);
+	@media screen and (max-width: 820px) {
+		left: 10%;
+		top: 16.5%;
+		transform: none;
+	}
+}
+.bannerTxt_title_en{
+	font-size: 26px;
+	font-weight: bold;
+	color: $redfont;
+	@media screen and (max-width: 820px) {
+		font-size: 24px;
+	}
+}
+.bannerTxt_title_big{
+	font-size: 62px;
+	font-weight: bold;
+	color: rgb(50,50,50);
+	margin-top: 6px;
+	@media screen and (max-width: 820px) {
+		font-size: 32px;
+		margin-top: 0;
+	}
+	@media screen and (max-width: 380px) {
+		font-size: 28px;
+		margin-top: 0;
+	}
+}
+.bannerTxt_redline{
+	width: 80px;
+	height: 4px;
+	background-color: $redfont2;
+	margin-top: 75px;
+	@media screen and (max-width: 820px) {
+		width: 44px;
+		height: 2px;
+		margin-top: 38px;
+	}
+}
+// 产品应用开始
+.cpyyBg>img{
+	@media screen and (max-width: 820px) {
+		min-height: 540px;
+	}
+	@media screen and (max-width: 414px) {
+		min-height: 374px;
+	}
+}
+.cpyyBox{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cpyy_txt{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 7.5%;
+	>.redline{
+		margin-top: 40px;
+	}
+	@media screen and (max-width: 414px) {
+		margin-top: 57px;
+		>.txt_title1{
+			font-size: 22px;
+		}
+		>.redline{
+			width: 40px;
+			height: 2px;
+			margin-top: 22px;
+		}
+	}
+}	
+.imgBox{
+	@media screen and (max-width: 820px) {
+		width: 90%;
+		margin-top: 34px;
+	}
+	@media screen and (max-width: 414px) {
+		width: 100%;
+		margin-top: 34px;
+	}
+}
+// 产品应用结束
+// 太阳能控制器参数开始
+.kzqcsBg>img{
+	@media screen and (max-width: 414px) {
+		min-height: 270px;
+	}
+}
+.csBox{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.csBox_left{
+	width: 41.5%;
+	min-height: 70%;
+	position: absolute;
+	left: 10%;
+	top: 16%;
+	background-color: #fff;
+	z-index: 8;
+	@media screen and (max-width: 820px) {
+		display: none;
+	}
+}
+.left_msgBox{
+	display: flex;
+	flex-direction: column;
+	margin-left: 15.5%;
+	margin-top: 10.5%;
+	@media screen and (max-width: 820px) {
+		margin-left: 0;
+		margin-top: 0;
+		>.txt_title1{
+			font-size: 18px;
+		}
+	}
+}
+.left_msgBox_redline{
+	width: 80px;
+	height: 3px;
+	background-color: $redfont;
+	margin-top: 35px;
+	@media screen and (max-width: 414px) {
+		width: 40px;
+		height: 2px;
+		margin-top: 18px;
+	}
+}
+.left_msgBox_canshuBox{
+	margin-top: 46px;
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 414px) {
+		margin-top: 22px;
+	}
+}
+.canshuItem{
+	display: flex;
+	align-items: center;
+	margin-bottom: 22px;
+	>.canshu_title{
+		font-size: 18px;
+		font-weight: bold;
+		color: rgb(77,77,77);
+	}
+	>.canshu_value{
+		font-size: 18px;
+		color: #666;
+	}
+	@media screen and (max-width: 414px) {
+		margin-bottom: 12px;
+		>.canshu_title{
+			font-size: 12px;
+		}
+		>.canshu_value{
+			font-size: 12px;
+		}
+	}
+}
+.csBox_right{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.right_imgBox{
+	width: 35%;
+	position: absolute;
+	bottom: 23%;
+	right: 10%;
+	z-index: 3;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	>img{
+		width: auto;
+		vertical-align: middle;
+	}
+	@media screen and (max-width: 820px) {
+		width: 34%;
+		left: 50%;
+		bottom: auto;
+		top: 21%;
+		transform: translate(-50%,0);
+	}
+	@media screen and (max-width: 414px) {
+		width: 44%;
+		left: 50%;
+		bottom: auto;
+		top: 21%;
+		transform: translate(-50%,0);
+	}
+}
+.csMsg_m{
+	width: 100%;
+	background-color: rgb(245,245,245);
+	padding: 47px;
+	display: none;
+	@media screen and (max-width: 414px) {
+		display: block;
+	}
+}
+
+// 太阳能控制器参数结束
+#contactBox{
+	padding-bottom: 120px;
+	padding-top: 132px;
+	@media screen and (max-width: 820px) {
+		padding-top: 57px;
+		padding-bottom: 0px;
+	}
+} 

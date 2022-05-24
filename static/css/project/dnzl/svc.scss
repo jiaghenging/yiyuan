@@ -1,0 +1,726 @@
+$redfont:#910000;
+$redfont2:#c20303; 
+.whiteBox1{
+	color: #000;
+	background: #fff;
+	border: none;
+	border-bottom: none;
+	&::placeholder{
+		color: #000;
+	}
+	
+}
+.bgImg{
+	>img{
+		min-height: 400px;
+	}
+}
+// banner开始
+.pc_bg{
+	display: block;
+	@media screen and (max-width: 820px) {
+		display: none!important;
+	}
+}
+.m_bg{
+	display: none;
+	@media screen and (max-width: 820px) {
+		display: block!important;
+	}
+}
+.whiteBox1{
+	color: #000;
+	background: #fff;
+	border: none;
+	border-bottom: none;
+	&::placeholder{
+		color: #000;
+	}
+}
+
+.bannerTitle{
+	position: absolute;
+	width: 900px;
+	left:50%;
+	top:15%;
+	transform:translate(-50%,0%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	@media screen and (max-width: 1250px) {
+		top:34%;
+	}
+	@media screen and (max-width: 820px) {
+		top:14%;
+	}
+	@media screen and (max-width: 414px) {
+		top:25.5%;
+	}
+}
+.title_en{
+	display: inline-block;
+	color: $redfont;
+	font-size: 35px;
+	line-height: 35px;
+	@media screen and (max-width: 820px) {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	@media screen and (max-width: 414px) {
+		font-size: 18px;
+		line-height: 18px;
+	}
+}
+.title_big{
+	font-size: 60px;
+	font-weight: bold;
+	line-height: 60px;
+	color: rgb(40,40,40);
+	opacity: 0;
+	margin-top: 10px;
+	@media screen and (max-width: 820px) {
+		font-size: 36px;
+		line-height: inherit;
+		margin-top: 10px;
+	}
+	@media screen and (max-width: 414px) {
+		font-size: 32px;
+		margin-top: 0;
+	}
+	@media screen and (max-width: 380px) {
+		font-size: 28px;
+		margin-top: 0;
+	}
+}
+.title_mid{
+	font-size: 24px;
+	line-height: 24px;
+	opacity: 0;
+	margin-top: 10px;
+	color: $redfont;
+	position: relative;
+	&::after{
+		content: '';
+		width: 66px;
+		height: 2px;
+		background-color: $redfont;
+		position: absolute;
+		right: -88px;
+		top: 60%;
+		transform: translate(0%,-50%);
+	}
+	&::before{
+		content: '';
+		width: 66px;
+		height: 2px;
+		background-color: $redfont;
+		position: absolute;
+		left: -88px;
+		top: 60%;
+		transform: translate(0%,-50%);
+	}
+	@media screen and (max-width: 1250px) {
+		font-size: 22px;
+		line-height: 22px;
+		&::after{
+			width: 40px;
+			right: -68px;
+		}
+		&::before{
+			width: 40px;
+			left: -68px;
+		}
+	}
+	@media screen and (max-width: 820px) {
+		font-size: 28px;
+		line-height: 28px;
+		&::after{
+			width: 40px;
+			right: -68px;
+		}
+		&::before{
+			width: 40px;
+			left: -68px;
+		}
+	}
+	@media screen and (max-width: 414px) {
+		font-size: 15px;
+		line-height: inherit;
+		margin-top: 0;
+		&::after{
+			width: 32px;
+			right: -51px;
+			height: 1px;
+		}
+		&::before{
+			width: 32px;
+			left: -51px;
+			height: 1px;
+		}
+	}
+}
+// banner结束
+// 轮播板块开始
+.partSwiper{
+	width: 100%;
+	height: 940px;
+	position: relative;
+	@media screen and (max-width: 820px) {
+		height: auto;
+	}
+	
+}
+.lbBg>img{
+	@media screen and (max-width: 414px) {
+		min-height: 286px;
+	}
+}
+// swiper
+ .swiper {
+        width: 100%;
+        height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+      }
+      .swiper-slide {
+		width: 100%;
+		height: 100%;
+        text-align: center;
+        font-size: 18px;
+		color: #fff;
+		position: relative;
+		
+      }
+.projectImgBox{
+	position: absolute;
+	bottom: 18%;
+	right: 9%;
+	z-index: 3;
+	>.projectImg1,.projectImg2,.projectImg3{
+		display: block;
+		width: auto;
+		
+	}
+	@media screen and (max-width: 1250px) {
+		width: 120px;
+		height: 204px;
+		bottom: 10%;
+		>.projectImg1,.projectImg2,.projectImg3{
+			width: 57%;
+			margin: 0 auto;
+		}
+	}
+	@media screen and (max-width: 820px) {
+		left: 50%;
+		bottom: 88px;
+		transform: translate(-50%,0);
+		>.projectImg1,.projectImg2,.projectImg3{
+			width: auto;
+			max-width: 70%;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%,0);
+		}
+	}
+	@media screen and (max-width: 414px) {
+		left: 50%;
+		bottom: 17%;
+		transform: translate(-50%,0);
+		>.projectImg1{
+			max-width: 160px;
+		}
+		>.projectImg2{
+			max-width: 208px;
+		}
+		>.projectImg3{
+			max-width: 186px;
+		}
+	}
+}
+.haloImg{
+	position: absolute;
+	bottom: 10%;
+	right: -1%;
+	z-index: 2;
+}
+.haloImg_pro3{
+	position: absolute;
+	bottom: 10%;
+	right: 0;
+	z-index: 2;
+	@media screen and (max-width: 1250px) {
+		bottom: 13%;
+		left: 50%;
+		transform: translate(-50%,0);
+		width: 80%;
+	}
+	@media screen and (max-width: 414px) {
+		width: 86%;
+	}
+}
+.haloImg_swiper{
+	position: absolute;
+	bottom: 9%;
+	right: 0;
+	z-index: 2;
+	@media screen and (max-width: 1250px) {
+		bottom: 6%;
+		left: 50%;
+		transform: translate(-50%,0);
+		width: 80%;
+	}
+	@media screen and (max-width: 414px) {
+		width: 86%;
+	}
+}
+      // .swiper-slide img {
+      //   display: block;
+      //   width: 400px;
+      //  max
+      //   object-fit: cover;
+      // }
+.projectMsg{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	width: 55%;
+	height: 80%;
+	background-color: #fff;
+	// transform: translate(0%,-50%);
+	z-index: 6;
+	margin-left: 0px;
+	@media screen and (max-width: 1250px) {
+		width: 80%;
+		left: 10%;
+		height: 450px;
+		top:32px;
+		bottom: inherit;
+		right: inherit;
+	}
+	@media screen and (max-width: 820px) {
+		display: none;
+	}
+}
+.lbMsgBox_m{
+	padding: 57px 0;
+	display: none;
+	@media screen and (max-width: 820px) {
+		display: block;
+	}
+	
+}
+.projectMsg_box{
+	display: flex;
+	flex-direction: column;
+	height: 85%;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(0,-50%);
+	@media screen and (max-width: 1720px) {
+		left: 18%;
+	}
+	@media screen and (max-width: 1500px) {
+		left: 10%;
+		height: 88%;
+		top: 7%;
+		transform: none;
+	}
+	@media screen and (max-width: 820px) {
+		position: static;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+.projectMsg_header{
+	display: flex;
+	flex-direction: column;
+}
+.projectMsg_header_title{
+	display: flex;
+	align-items: center;
+	>h1{
+		font-size: 40px;
+		line-height: 40px;
+		color: rgb(51,51,51);
+		&:nth-child(1){
+			color: $redfont;
+		}
+		@media screen and (max-width: 1250px) {
+			font-size: 19px;
+			line-height: 24px;
+		}
+		@media screen and (max-width: 414px) {
+			font-size: 22px;
+			line-height: 22px;
+		}
+		@media screen and (max-width: 380px) {
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+}
+.redLine{
+	width: 80px;
+	height: 4px;
+	background-color: $redfont;
+	margin-top: 24px;
+	@media screen and (max-width: 920px) {
+		width: 44px;
+		margin-top: 20px;
+		height: 2px;
+		background-color: $redfont2;
+	}
+}
+.msgBox{
+	// overflow: auto;
+}
+.canshu{
+	margin-top: 98px;
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 1250px) {
+		margin-top: 18px;
+	}
+	@media screen and (max-width: 414px) {
+		margin-top: 50px;
+	}
+}
+.guige{
+	height: 70%;
+	margin-top: 30px;
+	@media screen and (max-width: 950px) {
+		height: 56%;
+	}
+}
+.canshuItem{
+	display: flex;
+	align-items: center;
+	margin-bottom: 22px;
+	>.canshu_title{
+		font-size: 18px;
+		font-weight: bold;
+		color: rgb(77,77,77);
+	}
+	>.canshu_value{
+		font-size: 18px;
+		color: #666;
+	}
+	@media screen and (max-width: 1250px) {
+		>.canshu_title{
+			font-size: 15px;
+		}
+		>.canshu_value{
+			font-size: 15px;
+		}
+	}
+	@media screen and (max-width: 414px) {
+		margin-bottom: 10px;
+		>.canshu_title{
+			font-size: 12px;
+		}
+		>.canshu_value{
+			font-size: 12px;
+		}
+	}
+}
+.tab_btnBox{
+	height: 56px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	>div{
+		height: 100%;
+		text-align: center;
+		line-height: 56px;
+		font-size: 16px;
+		cursor: pointer;
+		background-color: rgb(237,237,237);
+		color: rgb(52,52,52);
+		&:nth-child(1){
+			width: 102px;
+		}
+		&:nth-child(2){
+			width: 194px;
+			margin-left: 20px;
+		}
+	}
+	@media screen and (max-width: 1250px) {
+		height: 50px;
+		>div{
+			line-height: 50px;
+			&:nth-child(1){
+				width: 102px;
+			}
+			&:nth-child(2){
+				width: 118px;;
+				margin-left: 20px;
+			}
+		}
+	}
+	@media screen and (max-width: 820px) {
+		position: static;
+		height: 30px;
+		margin-top: 50px;
+		>div{
+			line-height: 30px;
+			font-size: 14px;
+		}
+	}
+}
+.actBtn{
+	background-color: $redfont!important;
+	color: #fff!important;
+}
+// 更改Ui
+.el-table__body-wrapper{
+	height: auto!important;
+}
+.el-table .el-table__cell{
+	padding: 10px 0;
+	// border: none!important;
+}
+.el-table .cell{
+	font-size: 14px;
+	line-height: 14px;
+	@media screen and (max-width: 950px) {
+		font-size: 12px;
+		line-height: 12px;
+	}
+}
+.el-table--border::after, .el-table--group::after, .el-table::before{
+	background: none;
+}
+.el-table th.el-table__cell{
+	background-color: $redfont;
+	color: #fff;
+	&:nth-child(2){
+		background-color: rgb(178,0,0);
+	}
+}
+.el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf{
+	border-bottom: none;
+	border-right: 1px solid #fff;
+	&:nth-last-child(1){
+		border-right: none;
+	}
+}
+// 轮播板块结束
+// pr开始
+.proBg>img{
+	@media screen and (max-width: 414px) {
+		min-height: 286px;
+	}
+}
+.partPr{
+	width: 100%;
+	position: relative;
+	@media screen and (max-width: 820px) {
+		height: auto;
+	}
+}
+.tssMsgBox_m{
+	padding: 57px 0;
+	display: none;
+	@media screen and (max-width: 820px) {
+		display: block;
+	}
+	
+}
+.projectMsg2{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	width: 55%;
+	height: 80%;
+	background-color: #fff;
+	// transform: translate(0%,-50%);
+	z-index: 6;
+	display: flex;
+	align-items: center;
+	margin-right: 0px;
+	@media screen and (max-width: 1250px) {
+		width: 80%;
+		left: 10%;
+		height: 450px;
+		top:32px;
+		bottom: inherit;
+		right: inherit;
+	}
+	@media screen and (max-width: 820px) {
+		display: none;
+	}
+}
+.pr_img{
+	position: absolute;
+	bottom: 18%;
+	left: 9%;
+	>img{
+		display: block;
+	}
+	@media screen and (max-width: 820px) {
+		left: 50%;
+		transform: translate(-50%,0);
+		display: flex;
+		justify-content: center;
+		>img{
+			max-width: 70%;
+		}
+	}
+	@media screen and (max-width: 414px) {
+		left: 50%;
+		transform: translate(-50%,0);
+		>img{
+			max-width: 160px;
+		}
+	}
+}
+.projectMsg_box2{
+	display: flex;
+	flex-direction: column;
+	height: 85%;
+	position: absolute;
+	top: 50%;
+	left: 9%;
+	transform: translate(0,-50%);
+	@media screen and (max-width: 1720px) {
+		left: 13%;
+	}
+	@media screen and (max-width: 1500px) {
+		left: 12%;
+	}
+	@media screen and (max-width: 1250px) {
+		left: 4%;
+		height: 92%;
+	}
+	@media screen and (max-width: 820px) {
+		position: static;
+		transform: none;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+}
+// pr结束
+// TRS开始
+.svc3Bg>img{
+	@media screen and (max-width: 414px) {
+		min-height: 286px;
+	}
+}
+.partTrs{
+	width: 100%;
+	position: relative;
+	@media screen and (max-width: 820px) {
+		height: auto;
+	}
+}
+.projectMsg3{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	width: 55%;
+	height: 80%;
+	background-color: #fff;
+	// transform: translate(0%,-50%);
+	z-index: 6;
+	display: flex;
+	align-items: center;
+	margin-left: 0px;
+	@media screen and (max-width: 1250px) {
+		width: 80%;
+		left: 10%;
+		height: 495px;
+		top:32px;
+		bottom: inherit;
+		right: inherit;
+	}
+	@media screen and (max-width: 820px) {
+		display: none;
+	}
+}
+.haloImgBox{
+	position: absolute;
+	bottom: 18%;
+	right: 9%;
+	z-index: 3;
+	>.projectImg{
+		display: block;
+		width: auto;
+	}
+	// @media screen and (max-height: 840px) {
+	// 	bottom: 10%;
+	// }
+	// @media screen and (max-height: 1500px) {
+	// 	bottom: 28%;
+	// }
+	@media screen and (max-width: 1250px) {
+		left: 50%;
+		transform: translate(-50%,0);
+		display: flex;
+		justify-content: center;
+		bottom: 27%;
+		>img{
+			max-width: 70%;
+		}
+	}
+	@media screen and (max-width: 414px) {
+		left: 50%;
+		transform: translate(-50%,0);
+		>img{
+			max-width: 160px;
+		}
+	}
+}
+.projectMsg_box3{
+	display: flex;
+	flex-direction: column;
+	height: 85%;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(0,-50%);
+	@media screen and (max-width: 1720px) {
+		left: 18%;
+	}
+	@media screen and (max-width: 1500px) {
+		left: 10%;
+	}
+	@media screen and (max-width: 820px) {
+		position: static;
+		transform: none;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+// TRS结束
+#contactBox{
+	padding-bottom: 120px;
+	padding-top: 132px;
+	@media screen and (max-width: 820px) {
+		padding-top: 52px;
+		padding-bottom: 0px;
+	}
+}
+@media screen and (min-width: 3800px) {
+	.partSwiper,.partPr,.partTrs{
+		height: 1800px;
+	}
+	.haloImg_pro3,.haloImg_swiper{
+		right: 5%;
+	}
+}
